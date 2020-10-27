@@ -1,0 +1,66 @@
+/*https://fonts.google.com/*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:wght@300;400&display=swap');
+
+body {
+    background-color: rgb(250, 245, 245);
+}
+
+header, main, footer {  
+    background-color: rgb(250, 245, 245);
+    width: 700px;
+    margin: 0 auto;
+} 
+
+header {
+    position: relative;
+}
+/* ul position or ex.top: 10px */
+nav{
+    width: 350px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    text-align: right;
+}
+
+nav ul {
+    padding-right: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+/*Pseudo-Classes LoVe,HAte*/
+nav ul li a:link {
+    color: navy;
+}
+
+nav ul li a:visited {
+    color: navy;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+nav ul li a:active {
+    color: red;
+}
+
+main {
+    height: 500px;
+}
+
+footer {
+    height: 200px
+}
