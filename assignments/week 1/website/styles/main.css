@@ -33,7 +33,7 @@ nav ul li {
     margin: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 nav ul li a {
@@ -58,9 +58,53 @@ nav ul li a:active {
 }
 
 main {
-    height: 500px;
 }
 
-footer {
-    height: 200px
+footer p#copy-notice {
+    text-align: center;
+    color: navy;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    padding: 12px 0;
+}
+
+/* Contact Page - 960 grid*/
+
+main div#first-column, main div#second-column, main div#first-column form textarea {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+main div#first-column {
+    width: 467px;
+    display: inline-block;
+    padding: 18px;
+}
+
+main div#first-column form label{
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 18;
+    font-size: 24px;
+}
+
+main div#first-column form input{
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 18;
+}
+
+main div#first-column form textarea{
+    width: 331px;
+    height: 50px;
+
+}
+
+main div#second-column {
+    background-color: blue;
+    width: 233px;
 }
