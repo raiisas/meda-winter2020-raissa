@@ -73,38 +73,84 @@ footer p#copy-notice {
 main div#first-column, main div#second-column, main div#first-column form textarea {
     vertical-align: top;
     display: inline-block;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    padding: 6px;
-    border-radius: 5px;
 }
 
 main div#first-column {
     width: 467px;
+}
+
+main div#first-column form label {
     display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
     padding: 18px;
+    font-size: 18px;
+    color: darkgray;
 }
 
-main div#first-column form label{
+main div#first-column form input, main div#first-column form textarea {
     display: inline-block;
     font-family: 'Roboto', sans-serif;
-    margin-left: 18;
-    font-size: 24px;
+    margin-left: 18px;
+    font-size: 18px;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 5px;
 }
 
-main div#first-column form input{
-    display: inline-block;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 18;
-}
-
-main div#first-column form textarea{
+main div#first-column form textarea {
     width: 331px;
-    height: 50px;
-
+    height: 75px;
 }
 
 main div#second-column {
-    background-color: blue;
     width: 233px;
+    height: 300px;
+    margin-top: 18px;
+}
+
+main div#second-column p {
+    padding: 6px;
+    font-family: 'Roboto', sans-serif;
+    color: darkgray;
+}
+
+main div#second-column h2 {
+    padding: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+main div#second-column a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+/* Services Page */
+
+main#services-page table td, main#services-page th {
+    /* border: dashed grey 1px; */
+}
+
+main#services-page table thead {
+    padding: 6px;
+    font-family: 'Roboto', sans-serif;
+    color: cornflowerblue
+}
+
+main#services-page table thead th {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+main#services-page table tbody td {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    padding: 18px;
+}
+
+main#services-page table .odd-row {
+    background-color: cornsilk;
 }
