@@ -35,7 +35,7 @@ if (fileExists === false) {
 
 let contentArray = fileContents.split(""); // split divides the characters
 
-console.log(contentArray);
+// console.log(contentArray);
 
 let letterCount = 0;
 
@@ -51,3 +51,30 @@ for (let i = 0; i < contentArray.length; i++) {
 
 }
 console.log(`The file ${filename} contains a total of ${letterCount} letters.`);
+
+// Count Letters END
+
+// Count Words START
+
+let wordArray = fileContents.split(" ");
+
+// let wordCount = 0;
+
+/* for (let i = 0; i < contentArray.length; i++) {
+    wordCount++
+}
+*/console.log(`It has a total of ${wordArray.length} words in it.`)
+
+// Count Words END
+
+// Count Sentences START
+
+// let sentenceArray = fileContents.split("."); 
+
+let sentenceCount = 0;
+
+for (let i = 0; i < contentArray.length; i++) {
+    if (contentArray[i] === "." || contentArray[i] === "!" || contentArray[i] === "?") {
+        sentenceCount++
+    }
+}
