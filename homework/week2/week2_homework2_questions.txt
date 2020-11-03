@@ -1,0 +1,43 @@
+Why are you taking the back-end class? What are your current expectations of the back-end class?
+
+At this point, I'd like to challenge myself with backend coding languages. I was hoping to learn a little Java but I'm enjoying go more in-depth with Javascript.
+
+Before front-end class, did you have coding experience? What computer language(s) and how long ago?
+
+Yes, I had HTML/CSS. I've been coding in the aforementioned languages off-and-on since 2001.
+
+
+What front-end topics did you find difficult or what did you struggle with?
+
+I found Javascript for the frontend challenges at first until I had to use it on a Wordpress site. Also, the summer cohort was given a project, so I created a character counter for a form <input> that decrements the number of character inputs. 
+
+
+Did the front-end class meet your expectations? Explain how it did or did not.
+
+Yes, the reason why is because it gave some basic tools for making a website. I found the projects useful and that went beyond my expectations.
+
+
+Are you switching careers or looking to add skills to your resume? Why?
+
+Both. Perhaps I'm still searching where I fit in terms of the tech field, but I think I'd like to build my backend coding skills.
+
+
+What books or other resources are you depending on outside of class to enhance your learning?
+
+Lynda.com has been helpful for me to understand the syntax in Javascript. Coming from an HTML/CSS background perhaps the hardest thing for me to do is remember different punctuations for if statements, arrays, objects, and loops. Function seem to be easier to follow.
+
+
+Other than HTML, CSS, and JavaScript, what other computer languages are you currently learning or are interested in learning? Why?
+
+I think my next step is to pick up Java. I'm interested in developing apps and am curious to learn how it connects/diverges from Javascript.
+
+
+Where do you see the industry going in the future?
+
+VR technology seems to be the future of tech. With so many young people learning to code and engaging with VR, I can only surmise that the two including the pandemic will lead to holograms of ourselves in meetings. A Mission Techies class in virtual space?
+
+After taking the back-end class do you plan or have already planned on continuing your learning in tech? What specifically do you plan on focusing?
+
+Yes, I've applied for the Twitter and Microsoft apprenticeships. If I don't land anything afterwards, I'll do a few projects and hack-a-thons. 
+
+

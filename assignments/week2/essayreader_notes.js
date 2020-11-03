@@ -1,3 +1,15 @@
+// Javascript doesn't have a way to read or write files
+// JS in the backend Node is running the JS in the backend
+
+// process.argv -> Property of the process object everytime you run something in node 
+// process.argv; // This is an Array
+
+// loads up the node fs module so it can be used in this script | fs = file system
+const fs = require("fs"); 
+
+// check this in node and notice the info it outputs | this is how we pass info to from node to our JS
+let arguments = process.argv;
+
 // Check if we have an existing file called "history.txt"
 if (fs.existsSync("history.txt")) {
     let history = fs.readFileSync("history.txt", "utf-8");
