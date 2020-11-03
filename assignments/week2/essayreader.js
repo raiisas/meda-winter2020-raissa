@@ -10,6 +10,28 @@ const fs = require("fs");
 // check this in node and notice the info it outputs | this is how we pass info to from node to our JS
 let arguments = process.argv;
 
+// Check if we have an existing file called "history.txt"
+if (fs.existsSync("history.txt")) {
+    let history = fs.readFileSync("history.txt", "utf-8");
+} else {
+    fs.writeFileSync("history.txt", "", "utf-8");
+}
+
+// console.log(arguments);
+
+let fileName = arguments[2];
+
+// console.log(fileName);
+
+const fileExists = fs.existsSync(fileName);
+
+if (fileExists === false) {
+    console.log("Sorry, that file doesn't exist! Check your filepath.");
+    return;
+}
+
+// const serverPassword = 12345; // checking if json works
+
 //console.log(arguments); // process.argv is communicating with node
 
 let filename = arguments[2];
@@ -71,10 +93,8 @@ let wordArray = fileContents.split(" ");
 
 // let sentenceArray = fileContents.split("."); 
 
-let sentenceCount = 0;
+let thirdSentence = `It has a total of ${sentenceCount} sentences in it.`;
 
-for (let i = 0; i < contentArray.length; i++) {
-    if (contentArray[i] === "." || contentArray[i] === "!" || contentArray[i] === "?") {
-        sentenceCount++
-    }
-}
+console.log(thirdSentence);
+
+history = history + thirdSentence;
