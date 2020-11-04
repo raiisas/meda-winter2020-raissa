@@ -101,4 +101,4 @@ history = history + "\n" + thirdSentence;
 
 
 
-// Documentation -> json | https://nodejs.org/dist/latest-v14.x/docs/api/fs.html
+// fs Documentation -> | https://nodejs.org/dist/latest-v14.x/docs/api/fs.html
