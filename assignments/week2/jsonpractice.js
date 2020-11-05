@@ -20,5 +20,37 @@ let constentsObject = JSON.parse(contents); // method to create object
 
 console.log(contents);
 console.log(constentsObject);
+
+const myObject = {
+    "lastname": "Doe",
+    "ability": function() {
+        // this -> keyword refers Object it is in
+        console.log(this.lastName + "is eating food"); 
+    }, 
+    possessions: ["car", "house", "computer"],
+    deceased: false,
+    age: 45,
+    "is fun": false,
+    lastUpdate: new Date(Date.now()),
+    actualDate: "11/4/2020"
+};
+
+let jsonObjectConverted = JSON.stringify(myObject);
+
+// console.log(jsonObjectConverted);
+
+fs.writeFileSync("savedJSON.json", jsonObjectConverted, "utf-8");
+
+myObject.ability // run the function
+// Ways to run a function
+myObject.age;
+myObject["is fun"];
+
+let parsedStringifiedJSON = fs.readFileSync("savedJSON.js", "utf-8");
+parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
+
+console.log(myObject);
+console.log(parsedStringifiedJSON);
+
 // console.log(contents.name);
 // console.log(typeof contents);
