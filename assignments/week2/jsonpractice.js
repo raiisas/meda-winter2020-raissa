@@ -16,10 +16,10 @@ if (fileExists) {
     return;
 }
 
-let constentsObject = JSON.parse(contents); // method to create object
+let constentsObject = JSON.parse(contents); // method to create JS object
 
-console.log(contents);
-console.log(constentsObject);
+console.log(typeof contents);
+console.log(typeof constentsObject);
 
 const myObject = {
     "lastname": "Doe",
@@ -35,18 +35,19 @@ const myObject = {
     actualDate: "11/4/2020"
 };
 
-let jsonObjectConverted = JSON.stringify(myObject);
+let jsonObjectConverted = JSON.stringify(myObject); // Converts Object to a String
 
 // console.log(jsonObjectConverted);
 
 fs.writeFileSync("savedJSON.json", jsonObjectConverted, "utf-8");
 
-myObject.ability // run the function
-// Ways to run a function
+myObject.ability();
+
 myObject.age;
 myObject["is fun"];
 
-let parsedStringifiedJSON = fs.readFileSync("savedJSON.js", "utf-8");
+let parsedStringifiedJSON = fs.readFileSync("savedJSON.json", "utf-8");
+
 parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
 
 console.log(myObject);
