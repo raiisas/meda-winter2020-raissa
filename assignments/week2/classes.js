@@ -25,16 +25,35 @@ class Car { // Capitalize name
         this.year = year; // statements end in ;
         this.model = model; // this represents current object -> ex. model
         this.currentFuelGallons = 0;
+        this.fuelCapacity = 15;
         this.registeredDate = new Date(Date.now());
+        this.expiredDate = null; // us null if don't know a value
     }
 
-    checkFuel(){ // method
-        console.log(`The car ${this.make} ${this.model} has ${this.currentFuelGallons} of gallons of gas left in the tank.`);
+    checkFuel() {
+        console.log(`The car ${this.make} ${this.model} has ${this.currentFuelGallons} gallons of gas left in the tank.`);
+    }
+
+    retire() {
+        console.log();
     }
 
     refuel(gallons) {
         if (typeof gallons === "number") {
-        this.currentFuelGallons = this.currentFuelGallons + gallons;
+            
+            if (gallons > this.fuelCapacity - this.currentFuelGallons) {
+                console.log("There is not enough room in the tank for that many gallons! Topping off the tank instead.")
+                this.currentFuelGallons = this.fuelCapacity;
+                gallons = this.fuelCapacity;
+            } else {
+                this.currentFuelGallons = this.currentFuelGallons + gallons;
+            }
+
+
+            console.log("Refuel successful, added " + gallons + " to the tank.");
+        } else {
+            console.log("Refueling needs a valid number!");
+        }
     }
 }
 
@@ -46,7 +65,12 @@ let car6 = new Car("Voltswagen", "Golf II", 19800);
 car3.checkFuel();
 car4.checkFuel();
 
+car4.refuel(400);
+car4.checkFuel();
+
+// car1.checkFuel();
+
 console.log("The car " + car4.make + car4.model + "has " + car3.currentFuelGallons + " gallons of gas left.");
 
-console.log(car1, car2);
-console.log(car3, car4);
+// console.log(car1, car2);
+// console.log(car3, car4);
