@@ -2,7 +2,12 @@ class Animal {
     constructor(alive) {
         this.living = alive;
     }
+    died() {
+        this.living = false;
+    }
 }
+
+
 
 class Mammal extends Animal { // Parent Class
     constructor(alive) {
@@ -17,6 +22,13 @@ class Mammal extends Animal { // Parent Class
         } else {
             console.log("Animal eats some food");
         } 
+    }
+    breed(partner) {
+        if (partner.constructor.name == this.constructor.name) {
+            console.log("successful breeding");
+            let child = new this.constructor();
+            console.log(child);
+        }
     }
 }
 
@@ -44,7 +56,13 @@ class Cat extends Mammal { // Child Class
     }
 }
 
-let animal1 = new Dog("Fido ", true); // new is used to create an Object from a class
+let dog1 = new Dog("Fido ", true);
+let dog2 = new Dog("Fluffy ", true);
+
+dog2.breed(dog1); // Object-oriented programming
+// keyword new = new object based on that class
+
+/*let animal1 = new Dog("Fido ", true); // new is used to create an Object from a class
 animal1.bark();
 animal1.eat();
 console.log(animal1.living);
@@ -53,6 +71,9 @@ let animal2 = new Cat ("Garfield ", true);
 animal2.meow();
 animal2.eat();
 console.log(animal2.living);
+
+animal1.died();
+console.log(animal1.living); */
 
 
 // Classes are a template for creating objects. They encapsulate data with code to work on that data. -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes

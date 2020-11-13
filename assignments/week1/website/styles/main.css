@@ -16,7 +16,7 @@ header {
     position: relative;
 }
 /* ul position or ex.top: 10px */
-nav{
+nav {
     width: 350px;
     position: absolute;
     right: 0;
@@ -55,9 +55,6 @@ nav ul li a:hover {
 
 nav ul li a:active {
     color: red;
-}
-
-main {
 }
 
 footer p#copy-notice {
