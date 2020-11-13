@@ -15,10 +15,11 @@ console.log("hello there!");
 // npm install -S -> 
 // nodemon -> Not a package, it's just a tool. Ex nodemon index.js
 
-// To add to Github
+// To Ignore files on Github
 // 1. Create .gitignore file in VSC
-// 2. Check BASH cmd -> ls -a
+// 2. Check BASH cmd -> ls -la
 // 3. cmd nano .gitignore
-// 4. Add folder you want to ignore node_modules/
+// 4. Add folder you want to ignore. Ex. node_modules/
+// 5. WriteOut ^O
 
 // git reset --hard HEAD
