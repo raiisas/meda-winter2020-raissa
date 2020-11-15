@@ -3,7 +3,7 @@
 // Rule 3: Only one "object".
 // Rule 4: no comments.
 
-const fs = require("fs");
+const fs = require("fs"); // method to check if file exist
 
 const fileExists = fs.existsSync("example.json");
 
