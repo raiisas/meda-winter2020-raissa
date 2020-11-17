@@ -1,38 +1,50 @@
-const fs = require("fs"); // File System module
-const { type } = require("fs"); // Node's require module
+const fs = require("fs");
 
-const appExists = fs.existsSync("app.json"); // Testing if file (appExists) exists
-
-let arguments = process.argv; // Command line used to run the script
+const appExists = fs.existsSync("app.json");
 
 let items;
 
 if (appExists) {
-    items = fs.renameSync("app.json", "newapp.json", "utf-8"); // Check if file exist and renames it o "newapp.json" if it does exist
+    items = fs.readFileSync("app.json", "utf-8");
 } else {
-    fs.writeFileSync("app.json", "utf-8"); // If it doesn't exist, write it and syncs it to the existing information
-    items = "";
+    console.log("App doesn't exist... Write it.");
+    return;
 }
 
-const myApp = {
-    "type": "festival",
-    "year": 2020,
-    "action": function() {
-        console.log(this.year + " needs review.");
-        return;
+let contentsObject = JSON.parse(contents);
+
+console.log(typeof contents);
+console.log(typeof contentsObject);
+
+const myObject = {
+    "lastName": "Doe",
+    "ability": function () {
+        // "this" keyword refers to the object it is in.
+        console.log(this.lastName + " is eating food.");
     },
-    tickets: ["single", "passport", "discount"],
-    lastupdate: new Date(Date.now()) // Properties can be added below this line
-}; 
-// Coverts myapp to a String so it can be read
-let appObjectConverted = JSON.stringify(myApp); 
+    possessions: ["car", "house", "refrigerator"],
+    deceased: false,
+    age: 45,
+    "is fun": false,
+    lastUpdate: "11/4/2020",
+    lastUpdateObject: new Date(Date.now())
+};
 
-fs.writeFileSync("app.json", appObjectConverted, "utf-8");
 
-// Parse makes the readable string into an Object for JSON
-let parsedApp = fs.readFileSync("app.json", "utf-8");
+let jsonObjectConverted = JSON.stringify(myObject);
 
-parsedApp = JSON.parse(parsedApp);
+// console.log(jsonObjectConverted);
 
-// console.log(myApp);
-console.log(parsedApp);
+fs.writeFileSync("savedJSON.json", jsonObjectConverted, "utf-8");
+
+myObject.ability();
+
+myObject.age;
+myObject["is fun"];
+
+let parsedStringifiedJSON = fs.readFileSync("savedJSON.json", "utf-8");
+
+parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
+
+console.log(myObject);
+console.log(parsedStringifiedJSON);
