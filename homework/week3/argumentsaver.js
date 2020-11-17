@@ -11,40 +11,37 @@ if (appExists) {
     return;
 }
 
-let contentsObject = JSON.parse(contents);
+let parsedApp = JSON.parse(items);
 
-console.log(typeof contents);
-console.log(typeof contentsObject);
+console.log(typeof items);
+console.log(typeof parsedApp);
 
-const myObject = {
-    "lastName": "Doe",
-    "ability": function () {
-        // "this" keyword refers to the object it is in.
-        console.log(this.lastName + " is eating food.");
+const myApp = {
+    "type": "festival",
+    "year": 2020,
+    "action": function() {
+        console.log(this.year + " needs review.");
+        return;
     },
-    possessions: ["car", "house", "refrigerator"],
-    deceased: false,
-    age: 45,
-    "is fun": false,
-    lastUpdate: "11/4/2020",
-    lastUpdateObject: new Date(Date.now())
-};
+    tickets: ["single", "passport", "discount"],
+    lastupdate: new Date(Date.now()) // Properties can be added below this line
+}; 
 
 
-let jsonObjectConverted = JSON.stringify(myObject);
+let appObjectConverted = JSON.stringify(myApp);
 
-// console.log(jsonObjectConverted);
+// console.log(appObjectConverted);
 
-fs.writeFileSync("savedJSON.json", jsonObjectConverted, "utf-8");
+fs.writeFileSync("savedJSON.json", appObjectConverted, "utf-8");
 
-myObject.ability();
+myAppt.action();
 
-myObject.age;
-myObject["is fun"];
+myApp.year;
+myApp["is fun"];
 
 let parsedStringifiedJSON = fs.readFileSync("savedJSON.json", "utf-8");
 
 parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
 
-console.log(myObject);
+console.log(myApp);
 console.log(parsedStringifiedJSON);
