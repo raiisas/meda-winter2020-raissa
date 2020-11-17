@@ -32,14 +32,14 @@ let appObjectConverted = JSON.stringify(myApp);
 
 // console.log(appObjectConverted);
 
-fs.writeFileSync("savedJSON.json", appObjectConverted, "utf-8");
+fs.writeFileSync("app.json", appObjectConverted, "utf-8");
 
-myAppt.action();
+myApp.action();
 
 myApp.year;
 myApp["is fun"];
 
-let parsedStringifiedJSON = fs.readFileSync("savedJSON.json", "utf-8");
+let parsedStringifiedJSON = fs.readFileSync("app.json", "utf-8");
 
 parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
 
