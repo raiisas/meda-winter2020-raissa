@@ -1,7 +1,7 @@
 // Bring in the express package.
 const express = require("express"); // Function to load express module
 
-// Run a cop of the express pagackage
+// Run a cop of the express module
 const app = express();
 
 // Connects our HTTP server with the Express web module
@@ -16,10 +16,11 @@ http.listen(port);
 
 console.log("Express server is now running on " + port); //http://127.0.0.1:3000/ or localhost:3000
 
+//Tells Express to load the files from the public_html folder when someone requests / or nothing.
 app.use("/", express.static("public_html/") );
 
 // A "second" website accessed only if you type localhost:3000/portfolio
-app.use("/portfolio", express.static("portfolio/") );
+app.use("/portfolio", express.static("portfolio/"));
 
 
 // npm packages reminder: use .gitignore
