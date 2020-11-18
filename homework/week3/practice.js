@@ -5,6 +5,8 @@ const appExists = fs.existsSync("app.json"); // Testing if file (appExists) exis
 
 let arguments = process.argv; // Command line used to run the script
 
+console.log(process.argv); // Ref: https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
+
 let items;
 
 if (appExists) {

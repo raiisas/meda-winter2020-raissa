@@ -20,3 +20,6 @@ app.use("/", express.static("public_html/") );
 
 // A "second" website accessed only if you type localhost:3000/portfolio
 app.use("/portfolio", express.static("portfolio/") );
+
+
+// npm packages reminder: use .gitignore
