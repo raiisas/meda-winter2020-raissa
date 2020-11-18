@@ -22,8 +22,12 @@ app.use("/", express.static("public_html/") );
 // A "second" website accessed only if you type localhost:3000/portfolio
 app.use("/portfolio", express.static("portfolio/"));
 
-app.post("/sayHello", () => {
+app.post("/sayHello", (request, response) => {
     console.log("Someone said hello!");
+    
+    let responseObject = {};
+
+    response.send(responseObject);
 }); // Run a function
 
 // npm packages reminder: use .gitignore
