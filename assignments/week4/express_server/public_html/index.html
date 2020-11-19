@@ -13,22 +13,37 @@
 
 </head>
 <body>
+    <label for=numbersubmission>Type your lucky number in: </label>
+    <input type="text" id="numbersubmission" />
+    <button id="helloserver">Press me to say hello to the server.</button>
 
     <script>
         $(document).ready(() => {
             console.log("jQuery is ready!");
 
-            // jQuery HTTP POST Request method. First argument is "Where do we send it", second argument "What are we sending", third argument "What do we do when we get a response".
-            let objectToSend = {
-                "message": "Hello"
-            };
+            $("#helloserver").click(() => {
 
-            $.post("http://localhost:3000/sayHello", objectToSend, (data) => {
-                console.log("The server has responded!");
+                // jQuery HTTP POST Request method. First argument is "Where do we send it", second argument "What are we sending", third argument "What do we do when we get a response".
+                let objectToSend = {
+                "message": "Hello",
+                "number": $("#numbersubmission").val()
+             };
+
+             $.post("http://localhost:3000/sayHello", objectToSend, (data) => {
+                console.log("The server has responded!", data);
+             });
+
+
             });
+            
+            
         });
     </script>
 </body>
 </html>
 
 <!-- Text server on Terminal with node . -->
+<!-- First-In-First-Out is a strategy to knowing if you have enough ()parantheses -->
+<!-- Test the code with console.log("clicked!"); -->
+<!-- Kill the Server -> Cmd C -->
+<!-- Terminal Merge Error | Fix -> :QA! -->
