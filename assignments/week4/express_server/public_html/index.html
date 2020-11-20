@@ -17,6 +17,10 @@
     <input type="text" id="numbersubmission" />
     <button id="helloserver">Press me to say hello to the server.</button>
 
+    <div id="resultsBox">
+        <p></p>
+    </div>
+
     <script>
         $(document).ready(() => {
             console.log("jQuery is ready!");
@@ -30,7 +34,18 @@
              };
 
              $.post("http://localhost:3000/sayHello", objectToSend, (data) => {
-                console.log("The server has responded!", data);
+                if (data.error === true) {
+
+                    $("#resultsBox > p").text("Unable to compare as value is out of range of 1 to 10");
+
+                } else {
+
+                    if (data.results === true) {
+                        $("#resultsBox > p").text("Congratulations you won");
+                    } else {
+                        $("#resultsBox > p").text("Try again tomorrow.");
+                    }
+                }
              });
 
 

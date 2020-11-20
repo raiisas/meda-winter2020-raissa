@@ -1,0 +1,13 @@
+Logic Flow Map
+Object Relationship Model
+UML Class Diagram
+
+/sayHello
+request object = {
+message: string
+number: string
+}
+What I expect from the back-end = {
+results: boolean // whether or not I won
+error: boolean // the number was out of range 1 to 10
+}
