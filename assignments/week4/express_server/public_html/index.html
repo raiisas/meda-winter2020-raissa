@@ -21,9 +21,32 @@
         <p></p>
     </div>
 
+    <div id="history">
+        <p>Last 10 Entries</p>
+        <table></table>
+    </div>
+
     <script>
         $(document).ready(() => {
             console.log("jQuery is ready!");
+            // 1. post; 2. port; 3. call it; 4. entry Object; 5. Arrow Function; 6. Go build it in the backend
+            // Sends a post request to get the "latest" entries from the server
+            $.post("http://localhost:3000/getPreviousEntries", {}, (dataFromServer) => {
+               // console.log(dataFromServer.latestEntries); // Request from frontend
+
+               let lastEntry = dataFromServer.latestEntries.pop();
+               let winningNumber = lastEntry.number; // Grab value we store in winningNumber variable
+               let time = lastEntry.timestamp;
+
+               let html = `<tr>
+                                <td>${userNumber}</td>
+                                <td>${winningNumber}</td>
+                                <td>${time}</td>
+                            </tr>`; // No jQuery
+
+                ${"#history table"}.append(html);
+
+            });
 
             $("#helloserver").click(() => {
 
