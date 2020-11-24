@@ -115,9 +115,12 @@ app.post("/sayHello", (request, response) => {
 });
 
 app.post("/getPreviousEntries", (req, res) => {
+
+    let slicedArray = history.submissions.slice(history.submissions.length - 10);
+    console.log(slicedArray);
     
     let dataToSendBack = {
-       latestEntries: history.submissions
+       latestEntries: slicedArray
     };
 
     res.send(dataToSendBack);
