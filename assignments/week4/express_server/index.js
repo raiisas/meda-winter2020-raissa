@@ -37,7 +37,7 @@ const http = require("http").Server(app);
 
 // Decide on the port number to listen on when running Express server.
 // DO NOT USE 80, 443, 20, 21, 22, etc.
-const port = 3000;
+const port = (process.env.PORT || 3000);
 
 // Tell http module that we will be listening on the number in the port variable.
 http.listen(port);

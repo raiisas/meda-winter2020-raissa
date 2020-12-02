@@ -1,0 +1,20 @@
+Adding Heroku === Installing globally
+
+1. Sign up for Free
+2. Terminal -> sudo nom install -g Heroku
+3. Password
+4. Check version -> node --version (v14.15.0)
+
+5. Create New Folder -> heroku_repos... Add files:
+Express_Server
+public_html
+Index.js
+History.json
+Package-lock.json
+Package.json
+
+6. Make sure it's not a repository into a repository
+7. Check for HIDDEN files -> ls -la
+8. Make repo -> git init
+
+

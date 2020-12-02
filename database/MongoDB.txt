@@ -1,0 +1,31 @@
+DATABASE | COLLECTS DATA
+MongoDB | NoSQL Server (good for small projects)
+MERN stands for MongoDB, Express, React, Node
+
+1. New Project & Name it -> mongoosePractice
+2. Build Cluster (doesn't matter) -> Google Cloud
+
+Terminology
+Collections - A grouping of MongoDB documents. A collection is the equivalent of an RDBMS table. A collection exists within a single database. Collections do not enforce a schema.
+
+genericDatabase
+firstCollection
+
+3. CLI Week7 -> mongoosePractice
+4. Go to -> https://www.npmjs.com/package/mongoose
+5. CLI -> sudo npm install -S mongoose (local copy)
+-Or- npm uninstall -g mongoose 
+
+6. VSC -> const mongoose = require("mongoose"); // Type in exact folder name
+
+7. Go to mongoosePractice -> Cluster 0
+Click -> connect
+Setup IP address -> Step 1 -> Allow Access Anywhere
+Allow use of IP anywhere and create a DB user
+
+8. Connect your application -> Node.js
+9. Add to VSC mongodb+srv://mongoosePracticeUser:<password>@cluster0.stkey.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+
+
+SHOW HIDDEN FILES IN MAC ->  CMD + SHIFT + . 
