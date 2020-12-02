@@ -25,7 +25,17 @@ Allow use of IP anywhere and create a DB user
 
 8. Connect your application -> Node.js
 9. Add to VSC mongodb+srv://mongoosePracticeUser:<password>@cluster0.stkey.mongodb.net/<dbname>?retryWrites=true&w=majority
+10 Add password to string Add to VSC mongodb+srv://mongoosePracticeUser:<password>ADD PASSWORD@cluster0.stkey.mongodb.net/<dbname>?retryWrites=true&w=majority
+10. Add genericDatabase url "mongodb+srv://mongoosePracticeUser:<password>Wiz@3121!@cluster0.stkey.mongodb.net/genericDatabase?retryWrites=true&w=majority";
 
+11. Google DNS Servers -> Mac OS DNS Servers 8.8.8.8 / 4.4.4.4
+12. Connect mongoose.connect with Objects
+13. Create Schema
+14. Note: MongoDB requires collections to end with an "s" and mongoose will add it
+15. Mongoose Documentation -> mongoosejs.com
+
+JOURNAL
+Mac OS DNS servers was not recognizing? the open IP address. So, step 11 allowed the database to connect to the Network.
 
 
 SHOW HIDDEN FILES IN MAC ->  CMD + SHIFT + . 
