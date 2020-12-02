@@ -39,3 +39,6 @@ Mac OS DNS servers was not recognizing? the open IP address. So, step 11 allowed
 
 
 SHOW HIDDEN FILES IN MAC ->  CMD + SHIFT + . 
+
+.GITIGNMORE
+Use -> git reset to undo git add -A
