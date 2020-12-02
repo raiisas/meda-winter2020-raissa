@@ -26,7 +26,7 @@ Allow use of IP anywhere and create a DB user
 8. Connect your application -> Node.js
 9. Add to VSC mongodb+srv://mongoosePracticeUser:<password>@cluster0.stkey.mongodb.net/<dbname>?retryWrites=true&w=majority
 10 Add password to string Add to VSC mongodb+srv://mongoosePracticeUser:<password>ADD PASSWORD@cluster0.stkey.mongodb.net/<dbname>?retryWrites=true&w=majority
-10. Add genericDatabase url "mongodb+srv://mongoosePracticeUser:<password>Wiz@3121!@cluster0.stkey.mongodb.net/genericDatabase?retryWrites=true&w=majority";
+10. Add genericDatabase
 
 11. Google DNS Servers -> Mac OS DNS Servers 8.8.8.8 / 4.4.4.4
 12. Connect mongoose.connect with Objects
@@ -34,11 +34,24 @@ Allow use of IP anywhere and create a DB user
 14. Note: MongoDB requires collections to end with an "s" and mongoose will add it
 15. Mongoose Documentation -> mongoosejs.com
 
+16. Edit User pwd -> Users tab -> https://cloud.mongodb.com/v2/5fc6968d2986b77be6a387db#security/database/users
+
 JOURNAL
 Mac OS DNS servers was not recognizing? the open IP address. So, step 11 allowed the database to connect to the Network.
+
+DOCUMENTATION
+https://docs.atlas.mongodb.com/troubleshoot-connection/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+mongoosePracticeUser 
 
 
 SHOW HIDDEN FILES IN MAC ->  CMD + SHIFT + . 
 
 .GITIGNMORE
 Use -> git reset to undo git add -A
+
+
+julianne@vendition
+Bootcamp for sales development
+1. You are interested in doing
+2. Requires a set of skills you currently have 
+3. Sets you up for long-term career goals

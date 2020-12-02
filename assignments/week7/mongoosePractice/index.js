@@ -1,7 +1,7 @@
 const mongoose = require("mongoose"); // Type in exact folder name
 
 // URL that we use to connect to MongoDB Atlas
-const db = "mongodb+srv://mongoosePracticeUser:Wiz@3121!@cluster0.stkey.mongodb.net/genericDatabase?retryWrites=true&w=majority";
+const db = "mongodb+srv://mongoosePracticeUser:VgM8hR0qsQT60T43@cluster0.stkey.mongodb.net/genericDatabase?retryWrites=true&w=majority";
 
 // We use connect to actually connect to the database. The connect method needs three arguments, URL, options, and callback.
 let connection = mongoose.connect(db, {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true}, (error) => {
