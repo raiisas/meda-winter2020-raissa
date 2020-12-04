@@ -39,6 +39,12 @@ Allow use of IP anywhere and create a DB user
 JOURNAL
 Mac OS DNS servers was not recognizing? the open IP address. So, step 11 allowed the database to connect to the Network.
 
+12/4/2020
+1. Reviewed creating a connection to db and Schema
+2. Created a read document with search feature
+3. Created a script to code updates
+4. Created a script to code a deletion app
+
 DOCUMENTATION
 https://docs.atlas.mongodb.com/troubleshoot-connection/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 mongoosePracticeUser 
@@ -50,8 +56,22 @@ SHOW HIDDEN FILES IN MAC ->  CMD + SHIFT + .
 Use -> git reset to undo git add -A
 
 
+NOTES ON CODE
+1. Require the mongoose package and query the database
+2. Link database (db)
+3. MDB hash is generated for files
+
+
 julianne@vendition
 Bootcamp for sales development
 1. You are interested in doing
 2. Requires a set of skills you currently have 
 3. Sets you up for long-term career goals
+4. Created script to delete all Eds (not following)
+
+
+Check if file exist
+Create file
+Create object
+Save Argument
+Convert to Json and save it
