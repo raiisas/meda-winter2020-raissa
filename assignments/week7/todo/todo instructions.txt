@@ -1,0 +1,27 @@
+
+1. npm init -> Add description and author -> Created package.json
+2. npm (install locally) install -S express
+3. npm install -S express mongoose
+-> rm -rf .git -> if you accidentally create a repository
+-> Add sudo at beginning of npm if something doesn't download
+4. Create index.js
+5. Create Client Folder -> Scripts Folder -> Style Folder -> Images Folder
+
+Index.js
+6. Setup packages in the file
+
+MongoDB
+7. Clusters
+8. Cluster0
+9. Collections tab
+10. Create Database button
+
+todoApp + noteCollections
+11. Need info to connect -> Overview tab -> Connect -> Connect Your Application
+12. Copy ->  mongodb+srv://mongoosePracticeUser:<password>@cluster0.stkey.mongodb.net/<dbname>?retryWrites=true&w=majority
+13 Paste inside "" under  ->  dbCredentials (Line 5)
+
+Add new user
+14. Database Access
+15. Add New User
+16. Update database name
