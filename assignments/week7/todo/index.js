@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const credentials = require("./credentials.js")
 
-const dbCredentials = "mongodb+srv://todoUser:todoUser@cluster0.stkey.mongodb.net/todoApp?retryWrites=true&w=majority";
+const dbCredentials = credentials.dbURL;
 
 let dbOption = {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true};
 let dbConnection = mongoose.connect(dbCredentials, dbOption, (error) => {
