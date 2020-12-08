@@ -26,3 +26,16 @@ app.use(bodyParser.urlencoded({extended:false}));
 console.log("Express server is running on port " + port);
 
 app.use("/", express.static("client/"));
+
+app.post("/newNote", (request, response) => {
+    const note = request.body;
+
+    console.log(note);
+
+    const responseObject = {
+        saved: true,
+        error: null
+    };
+
+    response.send(responseObject);
+});

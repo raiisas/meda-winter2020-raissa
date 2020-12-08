@@ -1,3 +1,28 @@
+const base_url = "http://localhost:3000/";
+
 $(document).ready(() => {
-    console.log("Hello!");
+
+    $("#submit").click(() => {
+
+        let priorityNumber = $("#notes-priority option:selected").attr("value");
+
+        priorityNumber = parseInt(priorityNumber);
+
+        let noteObject = {
+            author: null,
+            title: $("#note-title").val(),
+            text: $("#note-text").val(),
+            completed: false,
+            archived: false,
+            priority: priorityNumber,
+            categories: null,
+            timestamp: Date.now()
+        }
+
+      $.post(base_url + "newNote", noteObject, (data) => {
+          console.log(data.saved);
+      });
+    
+    });
+    
 });

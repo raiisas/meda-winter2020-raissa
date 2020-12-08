@@ -27,3 +27,49 @@ Add new user
 16. Update database name
 
 Database Security
+1. Separate file for db sensitive data
+2. Add file to .gitignore
+
+A ToDo Note Should have the following information: 
+Author: 
+Title
+Note text
+Completed Status
+Archive Status
+Priority Level
+Categories (future features)
+Timestamp
+
+Scope creep = Revision Cycle Hell
+Note: Someone wants a feature and it causes you to never complete the app. To counter this, write down the app feature you want and do it later
+
+FRONT-END REQUEST OBJECT:
+{
+AUTHOR: NULL
+TITLE: STRING
+TEXT: STRING
+COMPLTETED: BOOLEAN
+ARCHIVED: BOLEAN
+PRIORITY: NUMBER
+CATEGORIES: NULL
+TIMESTAMP: NUMBER (MILLISECONDS FROM DATE OBJECT)
+}
+
+BACK-END RESPONSE OBJECT {
+saved: boolean
+error: String (future feature)
+}
+Note: Backend is in index.js
+App.post(callback, route)
+
+FRONT-END REQUEST:
+Name: newNote (This is what we named it)
+Send: Request Object Object Above
+Return: Response Object Above
+
+$post(url, data, callback) 
+Note ignore 404 Error because this isn't run in the backend
+
+IF YOU FORGOT TO ADD A .GITIGNORE FILE
+git reset
+
