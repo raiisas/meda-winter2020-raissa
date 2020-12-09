@@ -1,3 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Nunito+Sans&family=Quicksand&family=Titillium+Web:wght@200&display=swap');
+
 body {
-    background-color: blanchedalmond;
+    background-color: oldlace;
+    font-family: 'Quicksand', sans-serif, Arial, Helvetica;
 }
+
+
+#loading-icon {
+    display: none;
+}
+
+#note-title, #note-text {
+    margin: 10px 0px 10px 0px;
+}
+
+#note-priority {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+}
+
+#submit {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+}
+
+#note-priority, #submit {
+    background-color: tomato;
+    border-color: tomato;
+    border-radius: 5px;
+    border: 1px;
+    color: mintcream;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+#submit-message {
+    display: none;
+}
+
+#loader {
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+}
+
+#submit-area {
+    height: 26px;
+    width: 110px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 600px) {
+   body {
+        height: auto;
+        margin: 0px 0px 5px 0px;
+    }
+}
+/* Color Chart Reference: https://www.w3schools.com/colors/colors_groups.asp  */

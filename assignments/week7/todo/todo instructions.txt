@@ -45,14 +45,14 @@ Note: Someone wants a feature and it causes you to never complete the app. To co
 
 FRONT-END REQUEST OBJECT:
 {
-AUTHOR: NULL
-TITLE: STRING
-TEXT: STRING
-COMPLTETED: BOOLEAN
-ARCHIVED: BOLEAN
-PRIORITY: NUMBER
-CATEGORIES: NULL
-TIMESTAMP: NUMBER (MILLISECONDS FROM DATE OBJECT)
+author: null
+title: string
+text: string
+completed: boolean
+archived: boolean
+priority: number
+categories: null
+timestamp: number (MILLISECONDS FROM DATE OBJECT)
 }
 
 BACK-END RESPONSE OBJECT {
