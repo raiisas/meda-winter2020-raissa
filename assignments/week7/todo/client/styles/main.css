@@ -3,15 +3,18 @@
 body {
     background-color: oldlace;
     font-family: 'Quicksand', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    color: slategray;
+    margin: 5px 5px 5px 5px;
 }
-
 
 #loading-icon {
     display: none;
 }
 
 #note-title, #note-text {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 5px 0px;
 }
 
 #note-priority {
@@ -27,13 +30,13 @@ body {
 }
 
 #note-priority, #submit {
-    background-color: tomato;
-    border-color: tomato;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
     border-radius: 5px;
     border: 1px;
     color: mintcream;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 500;
     text-decoration: none;
     padding: 5px 10px 5px 10px;
     margin: 10px 0px 10px 0px;
@@ -47,6 +50,7 @@ body {
     height: 26px;
     width: 26px;
     display: inline-block;
+    margin: 15px 0px 5px 25px;
 }
 
 #submit-area {
@@ -54,6 +58,7 @@ body {
     width: 110px;
     display: inline-block;
     vertical-align: top;
+    margin: 0px 20px 5px 0px;
 }
 
 @media only screen and (max-width: 600px) {
