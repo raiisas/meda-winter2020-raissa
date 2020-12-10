@@ -67,3 +67,18 @@ app.post("/newNote", (request, response) => {
         }
     });  
 });
+
+app.post("/getList", (request, response) => {
+    todoModel.find({}, (error, results) => {
+        
+        const responseObject = {
+            list: results,
+            error: null,
+        };
+        if (error) {
+            console.log("Failed to read database.");
+        } else {
+            response.send(responseObject);
+        }
+    });
+}); 

@@ -37,8 +37,9 @@ Note text
 Completed Status
 Archive Status
 Priority Level
-Categories (future features)
+Categories (future feature)
 Timestamp
+Due date (future feature)
 
 Scope creep = Revision Cycle Hell
 Note: Someone wants a feature and it causes you to never complete the app. To counter this, write down the app feature you want and do it later
@@ -72,4 +73,25 @@ Note ignore 404 Error because this isn't run in the backend
 
 IF YOU FORGOT TO ADD A .GITIGNORE FILE
 git reset
+
+-> ICONS | icons8.com
+
+READ FILE | FRONT-END REQUEST
+Name: newNote
+Send: Request Object Above
+Return: Response Object Above
+}
+
+READ FILE | FRONT-END REQUEST
+Name: getlist
+Send: {}
+Return: {
+List: [... all documents]
+}
+
+Notes on timestamp
+1. January 1970 -> timestamp:1607620857179
+2. Milliseconds
+3. To read it... We can feed it into an object
+
 

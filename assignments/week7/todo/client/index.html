@@ -13,24 +13,45 @@
 
 </head>
 <body>
-    <label for ="note-title">Title</label><br />
-    <input type="text" id="note-title" /><br />  
-    <label for="note-priority">Priority</label><br />
-    <select id="note-priority">
-        <option value="1">Level 1</option>
-        <option value="2">Level 2</option>
-        <option value="3">Level 3</option>
-        <option value="4">Level 4</option>
-        <option value="5">Level 5</option>
-    </select><br />
-    <label for="note-text">Notes</label><br />
-    <textarea rows="10" cols="50" id="note-text"></textarea><br />
-    <div id="submit-area">
-        <button id="submit">Submit To-Do</button>
+    <div id="new-note">
+        <h1>Create Tasks</h1>
+        <label for ="note-title">Title</label><br />
+        <input type="text" id="note-title" /><br />  
+        <label for="note-priority">Priority</label><br />
+        <select id="note-priority">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select><br />
+        <label for="note-text">Notes</label><br />
+        <textarea rows="10" cols="50" id="note-text"></textarea><br />
+        <div id="submit-area">
+            <button id="submit">Submit To-Do</button>
+        </div>
+        <div id="loader">
+        <img id="loading-icon" src="images/spinner.gif" width="22" height="auto" alt="loading icon" />
+        </div>
+
+        <div id="message">
+            <p id="submit-message"></p>
+        </div>
     </div>
-    <div id="loader">
-    <img id="loading-icon" src="images/spinner.gif" width="22" height="auto" alt="loading icon" />
+    
+    <div id="notes-list">
+        <h1>Current Tasks</h1>
+        <table id="tasks" >
+            <thead>
+                <tr>
+                    <th>Priority</th>
+                    <th>Task</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-    <p id="submit-message"></p>
 </body>
 </html>
