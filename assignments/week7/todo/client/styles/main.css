@@ -47,8 +47,7 @@ h1 {
     color: mintcream;
     font-size: 15px;
     font-weight: 500;
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
 
 #submit-message {
@@ -94,6 +93,17 @@ h1 {
 table, tr, th, td {
     padding: 15px 15px 15px 15px;
     text-align: left;
+}
+
+#data-task-id {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    border-radius: 5px;
+    border: 1px;
+    color: mintcream;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;  
 }
 
 

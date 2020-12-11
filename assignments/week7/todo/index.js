@@ -82,3 +82,22 @@ app.post("/getList", (request, response) => {
         }
     });
 }); 
+app.post("/modify", (req, res) => {
+
+    let request = req.body;
+
+    if (request.action === "delete") {
+        todoModel.findByIdAndDelete(request.id, (error, deleted) => {
+            if (error) {
+                console.log(error);
+            } else {
+                let response = {
+                    copy: deleted
+                }
+
+                res.send(response); // mongoose method
+            }
+        });
+    }
+
+});

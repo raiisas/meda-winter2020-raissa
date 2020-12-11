@@ -58,6 +58,7 @@ timestamp: number (MILLISECONDS FROM DATE OBJECT)
 
 BACK-END RESPONSE OBJECT {
 saved: boolean
+Id: String
 error: String (future feature)
 }
 Note: Backend is in index.js
@@ -89,9 +90,28 @@ Return: {
 List: [... all documents]
 }
 
+GET LIST | FRONT END REQUEST
+name: modify
+sending: {
+Id: String
+Action: String (if String == delete, betel from db, if String == update, update the document
+Data: Null or Object (based on action)
+}
+{
+Copy: Object (future feature: holds original task for undo)
+Error: String (future feature)
+}
+
 Notes on timestamp
 1. January 1970 -> timestamp:1607620857179
 2. Milliseconds
 3. To read it... We can feed it into an object
+
+
+SHORT CUTS
+Error -> err
+Event  -> e
+Request  -> req
+Response  -> res
 
 

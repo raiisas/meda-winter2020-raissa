@@ -6,18 +6,9 @@ $(document).ready(() => {
         console.log(data.list);
 
         for (let i = 0; i < data.list.length; i++) {
-
-            const html = `
-                <tr>
-                    <td>${data.list[i].priority}</td>
-                    <td>${data.list[i].title}</td>
-                    <td>${data.list[i].text}</td>
-                </tr>
-            `;
-
-            $("#tasks tbody").append(html);
-        }
+            addToList(data.list[i]);
         
+        }
     });
 
     $("#submit").click(() => {
@@ -53,15 +44,7 @@ $(document).ready(() => {
                     $("#note-text").val("");
                     $("#note-priority").val("1");
 
-                    const html = `
-                        <tr>
-                            <td>${noteObject.priority}</td>
-                            <td>${noteObject.title}</td>
-                            <td>${noteObject.text}</td>
-                        </tr>
-                    `;
-
-                    $("#tasks tbody").append(html);
+                    addToList.button[i];
 
                     setTimeout(() => {
                         $("#submit-message").fadeOut(600, () => {
@@ -73,3 +56,38 @@ $(document).ready(() => {
         });     
     });
 });
+
+function addToList(taskObject) {
+    const html = `
+    <tr data-task-id="${data.list[i]._id}">
+        <td>${taskObject.priority}</td>
+        <td>${taskObject.title}</td>
+        <td>${taskObject.text}</td>
+        <td><button>Delete</button></td>
+    </tr>
+`;
+
+$("#tasks tbody").append(html);
+};
+
+function refreshDeleteButtons() {
+   // Update selector to avoid selecting the update button.
+   $("#tasks tbody tr td button").click(function () {
+    // Pass the JavaScript object that was pressed on to the jQuery selector.
+
+    let taskID = $(this).parent().parent().attr("data-task-id");
+    
+    console.log(taskID);
+
+    let actionObject = {
+        id: taskID,
+        action: "delete",
+        data: null
+    }
+
+    $.post(base_url + "modify", actionObject, (data) => {
+        $(this).parent().parent().remove();
+    });
+    
+});
+};
