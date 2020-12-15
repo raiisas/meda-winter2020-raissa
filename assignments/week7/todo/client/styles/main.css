@@ -95,7 +95,21 @@ table, tr, th, td {
     text-align: left;
 }
 
-#data-task-id {
+#tasks {
+    width: 400px;
+    border: solid 1px grey;
+}
+
+#tasks tbody tr td:nth-child(5) {
+    position: absolute;
+}
+
+#tasks tbody tr td img {
+    display: none;
+    position: relative;
+}
+
+#delete tbody tr td img {
     background-color: cornflowerblue;
     border-color: cornflowerblue;
     border-radius: 5px;

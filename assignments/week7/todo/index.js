@@ -56,6 +56,7 @@ app.post("/newNote", (request, response) => {
         
         const responseObject = {
             saved: false,
+            savedTask: newNoteDocument,
             error: null
         };
 
@@ -65,7 +66,7 @@ app.post("/newNote", (request, response) => {
             responseObject.saved = true;
             response.send(responseObject);
         }
-    });  
+    });
 });
 
 app.post("/getList", (request, response) => {
@@ -73,15 +74,17 @@ app.post("/getList", (request, response) => {
         
         const responseObject = {
             list: results,
-            error: null,
+            error: null
         };
+        
         if (error) {
-            console.log("Failed to read database.");
+            console.log("failed to read database.");
         } else {
             response.send(responseObject);
         }
     });
-}); 
+});
+
 app.post("/modify", (req, res) => {
 
     let request = req.body;
@@ -96,6 +99,7 @@ app.post("/modify", (req, res) => {
                 }
 
                 res.send(response); // mongoose method
+            
             }
         });
     }
