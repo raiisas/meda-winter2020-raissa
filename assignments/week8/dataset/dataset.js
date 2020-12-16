@@ -21,9 +21,7 @@ for (let i = 0; i < dataArray.length; i++) {
     titleArray.push(entryTitleObject);
 }
 
-
 // Figure out how to "fix" titles with commas in it, Using positive lookahead.
-
 
 // Question 1 START
 console.log("What Union has the most members?");
@@ -180,8 +178,6 @@ titleArray.forEach(function (job) {
     }
 
 });
-
-
 
 let orderedJobArray = jobCountArray.sort(function (a, b) {
     if (a.year > b.year) {
