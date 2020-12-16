@@ -58,3 +58,56 @@ for (let i in unions) {
 console.log(`The Union with code ${highestUnionCode} has a member count of ${highestUnionMemberCount}. for the year 2018.`);
 
 // Question 1 END
+
+// Question 2 START
+console.log("What Job Title pays the most within in each union code?");
+
+let highestUnionPay = [];
+
+/* 
+
+[
+    {
+        unionCode: 352,
+        highest: 12574,
+        title: "Chief of Department"
+    }, 
+
+    {
+        unionCode: 220,
+        highest: 6808,
+        title: "Law Librarian"
+    }
+]
+
+*/
+titleArray.forEach(function (job) {
+
+    let jobYear = job.year.split("/")[0];
+
+    if (jobYear === "2018"); {
+
+        highestUnionPay.forEach(function (unionCounter) {
+
+            if (unionCounter.unionCode === job.unionCode) {
+
+                if (job.biWeeklyAvg > unionCounter.highest) {
+                    unionCounter.highest = job.biWeeklyAvg;
+                    unionCounter.title = job.title
+                }
+            }
+
+        });
+
+        highestUnionPay.push({
+            unionCode: job.unionCode, 
+            highest: job.biWeeklyAvg,
+            title: job.title
+        });
+
+    }
+
+});
+// console.log(highestUnionPay);
+
+// Question 2 END

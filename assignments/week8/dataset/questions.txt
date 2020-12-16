@@ -9,10 +9,13 @@ Use CSV for dataset (JSON is okay too)
 
 1. What is the average increase in salary per year for each title?
 2. What titles had a decrease in salary for each year
-3. What union has the most members?
+3. What union has the most members? DONE
 4. What job title pays the most within union doe
 5. How many new Jobs did each year have. Check to see if Title losses are also possible?
 
 COMMENT BLOCK OF CODE IN VSC
 Comment Cmd + K + C
 Uncomment Cmd + K + U
+
+BIG O NOTATION
+A way to understand how complex/efficient a piece of code is
