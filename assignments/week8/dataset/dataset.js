@@ -18,7 +18,6 @@ for (let i = 0; i < dataArray.length; i++) {
     let entry = dataArray[i].split(",");
     let fixedEntry = helpers.checkTitleCommas(entry);
     let entryTitleObject = new Title(fixedEntry[1], fixedEntry[2], fixedEntry[3], fixedEntry[4], fixedEntry[5], parseInt(fixedEntry[7]), parseInt(fixedEntry[8]));
-
     titleArray.push(entryTitleObject);
 }
 
@@ -42,7 +41,7 @@ titleArray.forEach(function (element) {
         } else {
             unions[currentUnion] += 1;
         }
-    }
+    }    
 });
 
 let highestUnionMemberCount = 0;
@@ -55,24 +54,22 @@ for (let i in unions) {
     }
 }
 
-// console.log(`The Union with code ${highestUnionCode} has a member count of ${highestUnionMemberCount}. for the year 2018.`);
+console.log(`The Union with code ${highestUnionCode} has a member count of ${highestUnionMemberCount} for the year of 2018.`);
 
 // Question 1 END
 
 // Question 2 START
-console.log("What Job Title pays the most within in each union code?");
+console.log("What Job Title pays the most within each union code?");
 
 let highestUnionPay = [];
-
-/* 
+/*
 
 [
     {
         unionCode: 352,
         highest: 12574,
         title: "Chief of Department"
-    }, 
-
+    },
     {
         unionCode: 220,
         highest: 6808,
@@ -82,16 +79,15 @@ let highestUnionPay = [];
 
 */
 
-// console.log(titleArray);
 
 titleArray.forEach(function (job) {
 
     let jobYear = job.year.split("/")[0];
-
-    if (jobYear === "2018"); {
+    
+    if (jobYear === "2012") {
 
         let found = false;
-    
+
         highestUnionPay.forEach(function (unionCounter) {
 
             if (unionCounter.unionCode === job.unionCode) {
@@ -100,21 +96,41 @@ titleArray.forEach(function (job) {
 
                 if (job.biWeeklyAvg > unionCounter.highest) {
                     unionCounter.highest = job.biWeeklyAvg;
-                    unionCounter.title = job.title
-                }
+                    unionCounter.title = job.title;
+                } 
+
             }
 
         });
+
         if (!found) {
             highestUnionPay.push({
-            unionCode: job.unionCode, 
-            highest: job.biWeeklyAvg,
-            title: job.title
-        });
-    }
+                unionCode: job.unionCode,
+                highest: job.biWeeklyAvg,
+                title: job.title
+            });
+        }
+
     }
 
 });
-console.log(highestUnionPay);
+
+let orderedUnionPay = highestUnionPay.sort(function (a, b) {
+    if (a.unionCode > b.unionCode) {
+        return 1;
+    } else if (a.unionCode < b.unionCode) {
+        return -1;
+    } else {
+        return 0;
+    }
+});
+
+for (let i = 0; i <  orderedUnionPay.length; i++) {
+    let currentUnion = orderedUnionPay[i];
+
+    console.log(`Union code ${currentUnion.unionCode} and Title ${currentUnion.title} was paid ${currentUnion.highest}.`);
+}
 
 // Question 2 END
+
+// Question
