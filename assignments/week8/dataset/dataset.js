@@ -55,7 +55,7 @@ for (let i in unions) {
     }
 }
 
-console.log(`The Union with code ${highestUnionCode} has a member count of ${highestUnionMemberCount}. for the year 2018.`);
+// console.log(`The Union with code ${highestUnionCode} has a member count of ${highestUnionMemberCount}. for the year 2018.`);
 
 // Question 1 END
 
@@ -81,15 +81,22 @@ let highestUnionPay = [];
 ]
 
 */
+
+// console.log(titleArray);
+
 titleArray.forEach(function (job) {
 
     let jobYear = job.year.split("/")[0];
 
     if (jobYear === "2018"); {
 
+        let found = false;
+    
         highestUnionPay.forEach(function (unionCounter) {
 
             if (unionCounter.unionCode === job.unionCode) {
+
+                found = true;
 
                 if (job.biWeeklyAvg > unionCounter.highest) {
                     unionCounter.highest = job.biWeeklyAvg;
@@ -98,16 +105,16 @@ titleArray.forEach(function (job) {
             }
 
         });
-
-        highestUnionPay.push({
+        if (!found) {
+            highestUnionPay.push({
             unionCode: job.unionCode, 
             highest: job.biWeeklyAvg,
             title: job.title
         });
-
+    }
     }
 
 });
-// console.log(highestUnionPay);
+console.log(highestUnionPay);
 
 // Question 2 END

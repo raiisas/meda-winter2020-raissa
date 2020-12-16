@@ -19,3 +19,6 @@ Uncomment Cmd + K + U
 
 BIG O NOTATION
 A way to understand how complex/efficient a piece of code is
+
+GIT Master Branch	
+Git checkout -b master branch
