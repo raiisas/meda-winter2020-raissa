@@ -133,4 +133,45 @@ for (let i = 0; i <  orderedUnionPay.length; i++) {
 
 // Question 2 END
 
-// Question
+// Question 3 START
+
+console.log("");
+
+let jobCountArray = [];
+
+titleArray.forEach(function(job) {
+
+    if (job.setID === "SFMTA") {
+        let jobYear = job.year.split("/")[0];
+
+        let found = false;
+
+        jobCountArray.forEach(function (jobCounter) {
+
+                if(jobYear === jobCounter.year) {
+                  jobCounter.jobCount++;
+                 found = true;
+            }
+        });
+
+            if (!found) {
+                jobCountArray.push({
+                    year: jobYear,
+                    jobCount: 1
+             });
+               
+            }
+    }
+});
+
+console.log(jobCountArray);
+
+for (let i = 2013; i < 2019; i++); {
+
+    let year = i.toString();
+    let nextYear = (i + 1).toString();
+
+    console.log(`For the year ${year}, we ${adjective} ${difference} jobs.`)
+}
+
+// Question 3 END
