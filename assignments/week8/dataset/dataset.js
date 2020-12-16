@@ -58,6 +58,7 @@ console.log(`The Union with code ${highestUnionCode} has a member count of ${hig
 
 // Question 1 END
 
+
 // Question 2 START
 console.log("What Job Title pays the most within each union code?");
 
@@ -128,50 +129,88 @@ let orderedUnionPay = highestUnionPay.sort(function (a, b) {
 for (let i = 0; i <  orderedUnionPay.length; i++) {
     let currentUnion = orderedUnionPay[i];
 
-    console.log(`Union code ${currentUnion.unionCode} and Title ${currentUnion.title} was paid ${currentUnion.highest}.`);
+    console.log(`Union Code ${currentUnion.unionCode} and ${currentUnion.title} was paid the highest biWeekly income of $${currentUnion.highest}.`);
 }
 
 // Question 2 END
 
 // Question 3 START
 
-console.log("");
+console.log("How many new jobs in SFMTA did we have each year? How many were lost?");
+
+/*
+[
+    {
+        year: 2012,
+        jobCount: 35
+    },
+    {
+        year: 2013,
+        jobCount: 36
+    }
+]
+*/
 
 let jobCountArray = [];
 
-titleArray.forEach(function(job) {
+titleArray.forEach(function (job) {
 
     if (job.setID === "SFMTA") {
+
         let jobYear = job.year.split("/")[0];
 
         let found = false;
 
         jobCountArray.forEach(function (jobCounter) {
-
-                if(jobYear === jobCounter.year) {
-                  jobCounter.jobCount++;
-                 found = true;
+            
+            if (jobYear === jobCounter.year) {
+                jobCounter.jobCount++;
+                found = true;
             }
+
         });
 
-            if (!found) {
-                jobCountArray.push({
-                    year: jobYear,
-                    jobCount: 1
-             });
-               
-            }
+        if (!found) {
+            jobCountArray.push({
+                year: jobYear,
+                jobCount: 1
+            });
+        } 
+
+    }
+
+});
+
+
+
+let orderedJobArray = jobCountArray.sort(function (a, b) {
+    if (a.year > b.year) {
+        return 1;
+    } else if (a.year < b.year) {
+        return -1;
+    } else {
+        return 0;
     }
 });
 
-console.log(jobCountArray);
+for (let i = 1; i < orderedJobArray.length; i++) {
 
-for (let i = 2013; i < 2019; i++); {
+    let year = orderedJobArray[i].year;
+    let jobCount = orderedJobArray[i].jobCount;
+    let prevJobCount = orderedJobArray[i -1].jobCount;
+    
+    let adjective;
+    let difference = jobCount - prevJobCount;
 
-    let year = i.toString();
-    let nextYear = (i + 1).toString();
+    if (jobCount > prevJobCount) {
+        adjective = "gained";
+    } else {
+        adjective = "lost";
+        difference = Math.abs(difference);
+    }
 
-    console.log(`For the year ${year}, we ${adjective} ${difference} jobs.`)
+    console.log(`For the year ${year}, we ${adjective} ${difference} jobs.`);
+
 }
 
 // Question 3 END
