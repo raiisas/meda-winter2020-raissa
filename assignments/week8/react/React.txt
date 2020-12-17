@@ -1,0 +1,67 @@
+REACT
+React is a declarative, efficient, and flexible JavaScript library (framework) for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
+
+What are frameworks?
+Whereas libraries are pre-written code to help with your code, frameworks are organize the content like an architecture. All frameworks are designed to speed up Frontend.
+
+Note: Don't use jQuery for React
+
+Comparisons
+jQuery - bike
+React - car
+Angular - truck
+
+Video: Most Popular JavaScript Frameworks 2012-2019 \ Vue is taking over React
+
+React is light and has less bugs
+
+:: reactjs.org/tutorial/tutorial.html ::
+1. Set up on browser or local environment (we used the later)
+2. npm init
+3. sudo npm install -S create-react-app
+4. npx create-react-app tutorial-app (can be used to bypass sudo || use for whole plugins)
+5. Success! Created tutorial-app at /Users/push/Documents/MEDA/meda-winter2020-raissa/assignments/week8/react/tutorial-app
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd tutorial-app
+  npm start
+
+Happy hacking!
+6. Ls 
+7. Cd tutorial-app
+8 npm start
+9. Ignore Xcode - but - allow terminal access
+10. Create .gitignore and ignore node_modules/
+
+11. Compiled successfully!
+
+You can now view tutorial-app (we named the folder) in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.236:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+12. Delete contents in src (source) folder
+13.Create index. css and index.js from Setup Option 2: Local Development Environment
+14. Add code from Step 6 in https://reactjs.org/tutorial/tutorial.html
+15. Npm start
+
+16. React deals with JXS props and elements
+
