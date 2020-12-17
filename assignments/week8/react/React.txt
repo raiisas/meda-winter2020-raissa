@@ -64,4 +64,5 @@ To create a production build, use npm run build.
 15. Npm start
 
 16. React deals with JXS props and elements
-
+17. Super calls a class you build off of - need to run the react component class
+18. React automatically updates webpage
