@@ -4,7 +4,7 @@ body {
     background-color: oldlace;
     font-family: 'Quicksand', sans-serif, Arial, Helvetica;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     color: slategray;
     margin: 20px 5px 5px 30px;
 }
@@ -21,14 +21,7 @@ body {
 #item-2 {
     min-height: 150px;
     width: 10em;
-    padding: 5px 10px 0px 20px;
-}
-
-h1 {
-    font-family: 'Quicksand', sans-serif, Arial, Helvetica;
-    font-size: 24px;
-    font-weight: 700;
-    color: tomato;
+    padding: 5px 10px 0px 30px;
 }
 
 #loading-icon {
@@ -113,9 +106,11 @@ table, tr, th, td {
     text-align: left;
 }
 
-#tasks {
-    width: 400px;
-    border: solid 1px grey;
+#notes-list {
+    font-size: 13px;
+    width: 450px;
+    border: dashed 3px lightslategray;
+    border-spacing: 15px;
 }
 
 #tasks tbody tr td:nth-child(5) {
@@ -127,8 +122,9 @@ table, tr, th, td {
     position: relative;
 }
 
-#delete tbody tr td img {
+#vanish {
     background-color: cornflowerblue;
+    width: 80px;
     border-color: cornflowerblue;
     border-radius: 5px;
     border: 1px;
@@ -136,6 +132,7 @@ table, tr, th, td {
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;  
+    padding: 10px 0px 10px 0px;
 }
 
 

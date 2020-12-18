@@ -64,7 +64,7 @@ function addToList(taskObject) {
             <td>${taskObject.priority}</td>
             <td>${taskObject.title}</td>
             <td>${taskObject.text}</td>
-            <td><button>Delete</button></td>
+            <td><button id="vanish">Delete</button></td>
             <td><img src="images/spinner.gif" width="22" height="22" alt="Loading Icon" /></td>
         </tr>
     `;
