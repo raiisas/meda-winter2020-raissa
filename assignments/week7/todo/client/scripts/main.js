@@ -38,7 +38,7 @@ $(document).ready(() => {
                 setTimeout(() => {
                     $("#submit").removeAttr("disabled");
                     $("#loading-icon").fadeOut(600);
-                    $("#submit-message").text("Successfully saved " + noteObject.title);
+                    $("#submit-message").text("Successfully saved your " + noteObject.title + " task!");
                     $("#submit-message").fadeIn(600);
 
                     addToList(data.savedTask);

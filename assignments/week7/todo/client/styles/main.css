@@ -21,12 +21,7 @@ body {
 #item-2 {
     min-height: 150px;
     width: 10em;
-    padding: 5px 10px 0px 10px;
-}
-
-#item-3 {
-    min-height: 150px;
-    padding: 5px 10px 0px 0px;
+    padding: 5px 10px 0px 20px;
 }
 
 h1 {
@@ -40,15 +35,20 @@ h1 {
     display: none;
 }
 
-#note-title, #note-text {
+#note-title, #note-text, #new-note {
     margin: 10px 0px 5px 0px;
 }
 
 #note-priority {
     display: inline-block;
-    width: 80px;
+    width: 100px;
     height: 35px;
+    padding-left: 15px;
     margin: 10px 0px 10px 0px;
+}
+
+#notes-list {
+    margin: 30px 0px 10px 0px;
 }
 
 #submit {
