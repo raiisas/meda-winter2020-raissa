@@ -1,4 +1,8 @@
 REACT
+https://reactjs.org/tutorial/tutorial.html
+
+
+
 React is a declarative, efficient, and flexible JavaScript library (framework) for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 
 What are frameworks?
@@ -66,3 +70,13 @@ To create a production build, use npm run build.
 16. React deals with JXS props and elements
 17. Super calls a class you build off of - need to run the react component class
 18. React automatically updates webpage
+
+
+DELETED CODE
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null // loads page to nothing
+    };
+  }

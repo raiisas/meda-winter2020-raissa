@@ -13,18 +13,23 @@
 
 </head>
 <body>
+    <div id="container">
+        <div id="item-1"><img src="images/todo.png" width="150px" height="150px" /></div>
+        <div id="item-2">
+            <h1>To-Do</h1><br />
+            <label for ="note-title">Task</label><br />
+            <input type="text" id="note-title" />
+        </div>
+        <div id="item-3"><label for="note-priority">Priority</label><br />
+            <select id="note-priority">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+            </select><br /></div>   
+    </div>
     <div id="new-note">
-        <h1>To-Do List</h1>
-        <label for ="note-title">Task</label><br />
-        <input type="text" id="note-title" /><br />  
-        <label for="note-priority">Priority</label><br />
-        <select id="note-priority">
-            <option value="1">Level 1</option>
-            <option value="2">Level 2</option>
-            <option value="3">Level 3</option>
-            <option value="4">Level 4</option>
-            <option value="5">Level 5</option>
-        </select><br />
         <label for="note-text">List</label><br />
         <textarea rows="10" cols="50" id="note-text"></textarea><br />
         <div id="submit-area">
@@ -40,7 +45,7 @@
     </div>
     
     <div id="notes-list">
-        <h1>Current Tasks</h1>
+        <h2>Current Tasks</h2>
         <table id="tasks" >
             <thead>
                 <tr>
